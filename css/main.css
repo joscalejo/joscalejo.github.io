@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Design System & Main Tokens (impeccable-design + taste-design standards)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Default Theme: Obsidian Dark */
+  --bg-canvas: hsl(222, 18%, 11%);
+  --bg-surface: hsl(222, 16%, 15%);
+  --bg-surface-elevated: hsl(222, 16%, 19%);
+  --border-subtle: hsla(217, 19%, 27%, 0.6);
+  --border-active: hsla(168, 76%, 42%, 0.5);
+  
+  --text-primary: hsl(210, 40%, 98%);
+  --text-secondary: hsl(215, 16%, 70%);
+  --text-muted: hsl(215, 12%, 50%);
+  
+  --accent-primary: hsl(168, 76%, 42%);      /* Emerald Teal */
+  --accent-secondary: hsl(199, 89%, 48%);    /* Cyan Sky */
+  --accent-tertiary: hsl(265, 89%, 78%);     /* Soft Purple Accent */
+  
+  --status-success: hsl(142, 71%, 45%);
+  --status-warning: hsl(38, 92%, 50%);
+  --status-error: hsl(0, 84%, 60%);
+  
+  --font-mono: 'Fira Code', monospace;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 25px rgba(16, 185, 129, 0.15);
+  
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Theme Options */
+[data-theme="matrix"] {
+  --bg-canvas: hsl(140, 100%, 3%);
+  --bg-surface: hsl(140, 100%, 6%);
+  --bg-surface-elevated: hsl(140, 100%, 9%);
+  --border-subtle: hsla(135, 60%, 25%, 0.4);
+  --border-active: hsl(135, 100%, 50%);
+  --text-primary: hsl(135, 100%, 65%);
+  --text-secondary: hsl(135, 70%, 45%);
+  --text-muted: hsl(135, 40%, 30%);
+  --accent-primary: hsl(135, 100%, 50%);
+  --accent-secondary: hsl(150, 100%, 45%);
+  --shadow-glow: 0 0 25px rgba(0, 255, 65, 0.25);
+}
+
+[data-theme="dracula"] {
+  --bg-canvas: hsl(231, 15%, 15%);
+  --bg-surface: hsl(232, 14%, 18%);
+  --bg-surface-elevated: hsl(232, 14%, 24%);
+  --border-subtle: hsla(265, 89%, 78%, 0.25);
+  --border-active: hsl(265, 89%, 78%);
+  --text-primary: hsl(60, 30%, 96%);
+  --text-secondary: hsl(225, 27%, 75%);
+  --text-muted: hsl(225, 15%, 55%);
+  --accent-primary: hsl(265, 89%, 78%);
+  --accent-secondary: hsl(191, 97%, 77%);
+  --shadow-glow: 0 0 25px rgba(189, 147, 249, 0.2);
+}
+
+[data-theme="light"] {
+  --bg-canvas: hsl(210, 20%, 97%);
+  --bg-surface: hsl(0, 0%, 100%);
+  --bg-surface-elevated: hsl(210, 15%, 93%);
+  --border-subtle: hsla(215, 20%, 82%, 0.7);
+  --border-active: hsl(221, 83%, 53%);
+  --text-primary: hsl(222, 47%, 11%);
+  --text-secondary: hsl(215, 25%, 35%);
+  --text-muted: hsl(215, 16%, 55%);
+  --accent-primary: hsl(221, 83%, 53%);
+  --accent-secondary: hsl(199, 89%, 48%);
+  --shadow-glow: 0 4px 20px rgba(37, 99, 235, 0.12);
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* App Header Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(18, 24, 36, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 100;
+  transition: background var(--transition-normal);
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Control Buttons (GUI/CLI, Theme, Language) */
+.btn-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.btn-control:hover {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-active);
+  transform: translateY(-1px);
+}
+
+.btn-control.active {
+  background: var(--accent-primary);
+  color: hsl(222, 18%, 11%);
+  border-color: var(--accent-primary);
+  font-weight: 700;
+}
+
+/* Layout Canvas Container */
+.main-wrapper {
+  padding-top: 75px;
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+/* Utility Animations & Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

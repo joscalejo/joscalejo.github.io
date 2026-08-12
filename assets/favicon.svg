@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <rect width="512" height="512" rx="100" fill="#121824"/>
+  <rect x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="#253248" stroke-width="8"/>
+  <!-- Terminal Header Dots -->
+  <circle cx="80" cy="76" r="14" fill="#ff5f56"/>
+  <circle cx="124" cy="76" r="14" fill="#ffbd2e"/>
+  <circle cx="168" cy="76" r="14" fill="#27c93f"/>
+  <!-- Prompt Symbol >_ -->
+  <path d="M 120 180 L 220 256 L 120 332" fill="none" stroke="#10b981" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="260" y1="332" x2="380" y2="332" stroke="#38bdf8" stroke-width="32" stroke-linecap="round"/>
+</svg>
