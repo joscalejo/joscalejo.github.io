@@ -1,42 +1,94 @@
-/**
- * i18n Translation & Language State Manager
- */
-
 export const i18n = {
-  currentLang: 'es',
+  currentLang: 'en',
 
   translations: {
     es: {
+      // Views & Navigation
       btnTerminal: "Terminal",
-      btnGui: "Vista CV",
+      btnVisualCv: "Vista CV",
       btnLang: "EN",
-      btnTheme: "Tema",
-      btnPdf: "Imprimir PDF",
-      welcomeBannerTitle: "Bienvenido al Portafolio Interactivo de José Callejo",
-      welcomeHint: "Escribe 'help' o haz clic en los comandos de la barra superior para explorar.",
+      btnTheme: "TEMA",
+      btnPdf: "PDF",
+
+      // Titlebar Tooltips & Labels
+      tipWinClose: "Cerrar vista actual / Volver al menú",
+      tipWinMin: "Limpiar pantalla",
+      tipWinMax: "Alternar pantalla completa",
+      tipWinCv: "Cambiar a Vista CV (formato visual completo)",
+      tipWinTheme: "Alternar paleta de colores",
+      tipWinLang: "Switch to English (EN)",
+      tipWinPdf: "Descargar / Imprimir CV en PDF",
+
+      // Terminal Banner & Quick Actions
+      termTitle: "kitty — joscalejo@hyprland:~ (zsh)",
+      termSubheader: "Haz clic en cualquier opción o escribe un comando.",
+      btnQuickVisualCv: "Ver CV Completo (Dossier Visual para RRHH)",
+      tipQuickVisualCv: "Abrir currículum visual estructurado para reclutadores y RRHH",
+
+      // Messages & Helpers
       availableCommands: "Comandos disponibles",
-      cmdNotFound: "Comando no encontrado: ",
-      typeHelp: "Escribe 'help' para ver la lista de comandos.",
-      langSwitched: "Idioma cambiado a Español.",
-      themeSwitched: "Tema cambiado a ",
-      pdfNotice: "Abriendo diálogo de impresión / descarga a PDF...",
-      clearNotice: "Consola limpiada."
+      cmdNotFound: "comando no encontrado",
+      typeHelp: "Escribe 'help' para ver la lista de comandos disponibles.",
+      langSwitched: "Idioma cambiado a español.",
+      themeSwitched: "Tema cambiado a",
+      pdfNotice: "Preparando PDF... abriendo diálogo de impresión.",
+      clearDone: "Pantalla limpiada.",
+      backToMenu: "VOLVER AL MENÚ",
+      backToMenuTip: "Presiona :q, ESC o haz clic para volver al menú principal",
+      inputAriaLabel: "Línea de entrada de comandos de terminal",
+      placeholderMenu: "Escribe un comando o haz clic arriba... (ej. whoami, skills)",
+      placeholderView: "Escribe :q o menú para volver, o escribe otro comando...",
+      viewInvalidCmdHelp: "Escribe ':q' o 'menú' para volver al menú principal.",
+      
+      // UX Additions
+      copiedEmail: "¡Correo copiado al portapapeles! 📋",
+      copyEmailBtn: "Copiar",
+      didYouMean: "¿Quizás quisiste decir?",
+      clickToRun: "haz clic para ejecutar"
     },
     en: {
+      // Views & Navigation
       btnTerminal: "Terminal",
-      btnGui: "Visual CV",
+      btnVisualCv: "Visual CV",
       btnLang: "ES",
-      btnTheme: "Theme",
-      btnPdf: "Print PDF",
-      welcomeBannerTitle: "Welcome to José Callejo's Interactive Portfolio",
-      welcomeHint: "Type 'help' or click any command tag above to explore.",
+      btnTheme: "THEME",
+      btnPdf: "PDF",
+
+      // Titlebar Tooltips & Labels
+      tipWinClose: "Close current view / Return to menu",
+      tipWinMin: "Clear screen buffer",
+      tipWinMax: "Toggle fullscreen",
+      tipWinCv: "Switch to Visual CV (full document format)",
+      tipWinTheme: "Cycle color palette",
+      tipWinLang: "Cambiar a Español (ES)",
+      tipWinPdf: "Download / Print CV as PDF",
+
+      // Terminal Banner & Quick Actions
+      termTitle: "kitty — joscalejo@hyprland:~ (zsh)",
+      termSubheader: "Click any option or type a command below.",
+      btnQuickVisualCv: "View Full CV (Visual Dossier for Recruiters)",
+      tipQuickVisualCv: "Open structured visual resume for recruiters and HR",
+
+      // Messages & Helpers
       availableCommands: "Available commands",
-      cmdNotFound: "Command not found: ",
-      typeHelp: "Type 'help' to view the list of available commands.",
+      cmdNotFound: "command not found",
+      typeHelp: "Type 'help' to see the list of available commands.",
       langSwitched: "Language switched to English.",
-      themeSwitched: "Theme changed to ",
-      pdfNotice: "Opening print / PDF download dialog...",
-      clearNotice: "Console cleared."
+      themeSwitched: "Theme changed to",
+      pdfNotice: "Preparing PDF... opening print dialog.",
+      clearDone: "Screen cleared.",
+      backToMenu: "RETURN TO MENU",
+      backToMenuTip: "Press :q, ESC or click to return to main menu",
+      inputAriaLabel: "Terminal command input line",
+      placeholderMenu: "Type a command or click above... (e.g. whoami, skills)",
+      placeholderView: "Type :q or menu to return, or type another command...",
+      viewInvalidCmdHelp: "Type ':q' or 'menu' to return to main menu.",
+
+      // UX Additions
+      copiedEmail: "Email copied to clipboard! 📋",
+      copyEmailBtn: "Copy",
+      didYouMean: "Did you mean?",
+      clickToRun: "click to run"
     }
   },
 
@@ -50,6 +102,6 @@ export const i18n = {
   },
 
   t(key) {
-    return this.translations[this.currentLang][key] || key;
+    return this.translations[this.currentLang]?.[key] ?? key;
   }
 };

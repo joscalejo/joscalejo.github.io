@@ -1,99 +1,176 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="obsidian">
+<html lang="en" data-theme="obsidian">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Callejo (joscalejo) | Linux Terminal CV & Portfolio</title>
-  <meta name="description" content="Portafolio interactivo estilo Terminal Linux y CV de José Callejo. Desarrollador de Software.">
-  <meta name="keywords" content="José Callejo, joscalejo, developer, portafolio, terminal, resume, CV, frontend, fullstack">
-  <meta name="author" content="José Callejo">
 
-  <!-- Favicon & PWA Manifest -->
+  <title>Josue Castro Alejos | Cybersecurity Engineer Portfolio</title>
+  <meta name="description" content="Portfolio interactivo de Josue Castro Alejos (@joscalejo) — Estudiante de Ingeniería en Ciberseguridad. Especialista en Explotación Web (CWES) & Pentesting Linux.">
+  <meta name="keywords" content="Josue Castro Alejos, joscalejo, ciberseguridad, cybersecurity, pentesting, ethical hacking, linux, CWES, HTB, portfolio">
+  <meta name="author" content="Josue Castro Alejos">
+  <meta name="theme-color" content="#0d9488">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://joscalejo.github.io">
+
+  <!-- Favicon & PWA -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#10b981">
 
-  <!-- Open Graph / Social Media Sharing -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="José Callejo | Linux Terminal CV & Portfolio">
-  <meta property="og:description" content="Portafolio interactivo tipo Consola Linux y CV de José Callejo. Desarrollador de Software.">
-  <meta property="og:image" content="assets/og-image.png">
-  <meta property="og:url" content="https://joscalejo.github.io">
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://joscalejo.github.io">
+  <meta property="og:title"       content="joscalejo | Cybersecurity Engineer Portfolio">
+  <meta property="og:description" content="Portfolio interactivo tipo terminal Linux. Ingeniería en Ciberseguridad, Pentesting & Ethical Hacking.">
+  <meta property="og:image"       content="https://joscalejo.github.io/assets/og-image.png">
 
   <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="José Callejo | Linux Terminal CV & Portfolio">
-  <meta name="twitter:description" content="Portafolio interactivo tipo Consola Linux y CV de José Callejo.">
-  <meta name="twitter:image" content="assets/og-image.png">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="joscalejo | Cybersecurity Engineer Portfolio">
+  <meta name="twitter:description" content="Portfolio interactivo tipo terminal Linux — Cybersecurity Engineering Student.">
+  <meta name="twitter:image"       content="https://joscalejo.github.io/assets/og-image.png">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/terminal.css">
   <link rel="stylesheet" href="css/gui.css">
+
+  <!-- Schema.org JSON-LD Structured Data for ATS & Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Josue Castro Alejos",
+      "alternateName": "o1101ol",
+      "jobTitle": "Cybersecurity Engineering Student & Web Penetration Tester",
+      "description": "Cybersecurity Engineering student at UPC specializing in Web Pentesting, OWASP Top 10, offensive security, and Linux administration. HTB CWES Certified (100% practical score).",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Universidad Peruana de Ciencias Aplicadas (UPC)"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Certified Web Exploitation Specialist (HTB CWES)",
+        "credentialCategory": "Professional Certification",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Hack The Box"
+        }
+      },
+      "knowsAbout": [
+        "Web Penetration Testing",
+        "OWASP Top 10",
+        "AppSec",
+        "Burp Suite",
+        "Python Security Automation",
+        "Linux Security (Fedora / Hyprland)",
+        "Network Security",
+        "Exploitation Techniques"
+      ],
+      "sameAs": [
+        "https://github.com/joscalejo",
+        "https://www.linkedin.com/in/joscalejo/",
+        "https://app.hackthebox.com/profile/1381254"
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Top Glassmorphic Navigation Bar -->
-  <header class="navbar">
-    <a href="#" class="brand" id="brand-logo">
-      <span class="brand-dot"></span>
-      <span>joscalejo@github:~$</span>
-    </a>
-    <div class="controls-group">
-      <button id="btn-toggle-view" class="btn-control" title="Alternar entre Terminal CLI y Vista CV Gráfica">Vista CV</button>
-      <button id="btn-lang" class="btn-control" title="Cambiar Idioma / Switch Language">EN</button>
-      <button id="btn-theme" class="btn-control" title="Cambiar Tema Cromático">Tema</button>
-      <button id="btn-pdf" class="btn-control" title="Imprimir o Guardar como PDF">PDF 🖨️</button>
+  <!-- Semantic Plain-Text Fallback for ATS Parsers & Search Engines (Accessible without JS) -->
+  <noscript>
+    <div style="padding: 2rem; max-width: 800px; margin: auto; font-family: sans-serif; line-height: 1.6;">
+      <h1>Josue Castro Alejos (@o1101ol)</h1>
+      <p><strong>Estudiante de Ingeniería de Ciberseguridad &bull; Pentester Web</strong> | Lima, Perú</p>
+      <p>Contacto: <a href="mailto:josuecastro5599@gmail.com">josuecastro5599@gmail.com</a> | <a href="https://github.com/joscalejo">GitHub</a> | <a href="https://www.linkedin.com/in/joscalejo/">LinkedIn</a> | <a href="https://app.hackthebox.com/profile/1381254">Hack The Box</a></p>
+      <hr>
+      <h2>Certificaciones</h2>
+      <p><strong>Certified Web Exploitation Specialist (HTB CWES)</strong> — Hack The Box (100% Practical Score)</p>
+      <h2>Educación</h2>
+      <p><strong>Universidad Peruana de Ciencias Aplicadas (UPC)</strong> — Ingeniería de Ciberseguridad (2024 &ndash; Presente)</p>
+      <h2>Habilidades Técnicas</h2>
+      <ul>
+        <li><strong>Pentesting Web / AppSec:</strong> OWASP Top 10, SQLi, XSS, SSRF, SSTI, XXE, CSRF, IDOR, Broken Auth, WAF Bypass, Burp Suite Pro, WPScan, interactsh.</li>
+        <li><strong>Sistemas & Redes:</strong> Fedora Linux, Hyprland, Kitty, Bash/Zsh Scripting, Wireshark, Nmap, TCP/IP, DNS, SSL/TLS.</li>
+        <li><strong>Herramientas & Lenguajes:</strong> Python 3, PowerShell (Living off the Land PoC), Git, LaTeX, Linux Hardening.</li>
+      </ul>
+      <h2>Proyectos Destacados</h2>
+      <ul>
+        <li><strong>PoC: Bypass Windows Defender (LotL):</strong> Scripting en PowerShell aprovechando Living off the Land con BadUSB e inyección por teclado.</li>
+        <li><strong>Plantilla LaTeX para Pentesting:</strong> Formato profesional modular para reportes de seguridad alineados con PTES y OWASP.</li>
+        <li><strong>redecod:</strong> CLI en Python para decodificación recursiva multicapa (30+ métodos criptográficos y de codificación).</li>
+        <li><strong>GPWG:</strong> Generador inteligente de diccionarios de contraseñas con permutaciones priorizadas.</li>
+      </ul>
     </div>
-  </header>
+  </noscript>
 
-  <!-- Main Content Wrapper -->
-  <main class="main-wrapper">
-    
-    <!-- 1. Interactive Terminal CLI View -->
-    <section id="terminal-view">
-      <div class="terminal-window">
-        <!-- Terminal Window Header -->
-        <div class="terminal-header">
-          <div class="window-buttons">
-            <span class="dot dot-close"></span>
-            <span class="dot dot-minimize"></span>
-            <span class="dot dot-maximize"></span>
-          </div>
-          <div class="window-title">bash — 80x24</div>
-          <div class="terminal-quick-actions" id="quick-tags-container">
-            <button class="quick-tag" data-cmd="whoami">whoami</button>
-            <button class="quick-tag" data-cmd="skills">skills</button>
-            <button class="quick-tag" data-cmd="projects">projects</button>
-            <button class="quick-tag" data-cmd="experience">experience</button>
-            <button class="quick-tag" data-cmd="contact">contact</button>
-            <button class="quick-tag" data-cmd="help">help</button>
-          </div>
-        </div>
+  <!-- ─── Page Wrapper ─────────────────────────────────────────── -->
+  <main class="page" id="main-content">
 
-        <!-- Terminal Body & Prompt Output -->
-        <div class="terminal-body" id="terminal-body">
+    <!-- ━━━ TERMINAL VIEW ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="terminal-view" aria-label="Interactive Terminal">
+      <div class="terminal-window" role="application" aria-label="Linux Terminal Emulator">
+
+        <!-- Terminal Desktop Window Titlebar -->
+        <header class="terminal-titlebar">
+          <div class="window-controls">
+            <button class="win-btn win-btn-close" id="btn-win-close" title="Cerrar / Volver al menú" aria-label="Close"></button>
+            <button class="win-btn win-btn-min" id="btn-win-min" title="Limpiar pantalla" aria-label="Minimize"></button>
+            <button class="win-btn win-btn-max" id="btn-win-max" title="Alternar pantalla completa" aria-label="Toggle Fullscreen"></button>
+          </div>
+          <div class="window-title">
+            <span class="term-icon"></span>
+            <span class="term-title-text" id="term-title-display">kitty — joscalejo@hyprland:~ (zsh)</span>
+          </div>
+          <div class="window-spacer" aria-hidden="true"></div>
+        </header>
+
+        <!-- Output & Input Flow -->
+        <div class="term-body" id="terminal-body" role="log" aria-live="polite" aria-label="Terminal output">
           <div id="terminal-output"></div>
 
-          <!-- Active Prompt Line -->
-          <div class="input-line">
-            <span class="prompt-container">
-              <span class="prompt-user">joscalejo</span><span class="prompt-at">@</span><span class="prompt-host">github</span>:<span class="prompt-path">~</span><span class="prompt-char">$</span>
-            </span>
-            <input type="text" id="cli-input" class="cmd-input" autocomplete="off" spellcheck="false" autofocus aria-label="Terminal input line">
+          <!-- Input Row with Zsh-style Ghost Autosuggestion -->
+          <div class="input-row" id="input-line">
+            <span class="ps1" id="cli-prompt" aria-hidden="true"><span class="acc1">joscalejo</span><span class="dim" style="display:inline-block;margin:0 1.5px;">@</span><span class="acc2">hyprland</span><span class="dim">:</span><span class="acc3">~</span><span class="ps1-char">$</span></span>
+            <div class="input-field-container">
+              <input
+                type="text"
+                id="cli-input"
+                class="cli-input"
+                autocomplete="off"
+                spellcheck="false"
+                autocorrect="off"
+                autocapitalize="off"
+                autofocus
+                aria-label="Terminal command input"
+                placeholder=""
+              >
+              <div id="cli-ghost-text" class="cli-ghost-text" aria-hidden="true"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. Visual GUI CV View (Hidden by default) -->
-    <section id="gui-view" style="display: none;">
-      <div id="gui-content" style="width: 100%;"></div>
+    <!-- ━━━ GUI / VISUAL CV VIEW ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="gui-view" class="view-hidden" aria-label="Visual CV">
+      <div id="gui-content"></div>
     </section>
 
   </main>
 
-  <!-- JavaScript ESM Bundle -->
+  <!-- Global Floating Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript (ESM) -->
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
